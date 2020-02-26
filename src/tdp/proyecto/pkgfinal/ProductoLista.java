@@ -23,16 +23,26 @@ public class ProductoLista {
         listaProductos.remove(prd);
     }
     
-    void mnostrarListaProductos() {
+    int cantidadProductos () {
+        return listaProductos.size();
+    }
+    
+    Producto buscarProductoXCodigo(int codigo) {
+        Producto prodEncontrado = null;
         for (Producto prd : listaProductos) {
-            System.out.println(
-                prd.codigo + "\t |\t" +
-                prd.tipo + "\t|\t" +
-                prd.nombre + "\t|\t" +
-                prd.precio + "\t|\t" +
-                prd.porcDesc + "\t|\t" +
-                prd.cantidadStock + "\t|\t"
-            );
+            if(prd.codigo == codigo)
+                prodEncontrado = prd;
+        }
+        
+        return prodEncontrado;
+    }
+    
+    void mostrarListaProductos() {
+        
+        System.out.println("----------------------------------");
+        for (Producto prd : listaProductos) {
+            prd.mostrarProducto();
+            System.out.println("----------------------------------");
         }
     }
 }

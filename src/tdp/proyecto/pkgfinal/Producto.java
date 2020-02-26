@@ -36,5 +36,14 @@ public class Producto {
         this.precio = precio;
         this.porcDesc = porcDesc;
         this.cantidadStock = cantidadStock;
-    }    
+    }
+    
+    void mostrarProducto() {
+        System.out.println(
+            " Código: " + this.codigo + "\tTipo: \"" + this.tipo + "\"\n" +
+            " Nombre: " + this.nombre + "\n" +
+            " Precio: S/ " + this.precio + "\tPorc. Desc.: " + this.porcDesc + "%\n" +
+            " Cantidad stock: " + this.cantidadStock + " unidades"
+        );
+    }
 }

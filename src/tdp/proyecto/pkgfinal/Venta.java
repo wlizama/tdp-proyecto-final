@@ -17,5 +17,17 @@ package tdp.proyecto.pkgfinal;
  */
 public class Venta {
     double cantidad;
+    double montoFinal;
+    Producto producto;
+
+    Venta(double cantidad, Producto producto) {
+        this.cantidad = cantidad;
+        this.producto = producto;
+        
+        producto.cantidadStock = producto.cantidadStock - cantidad;
+    }
     
+    double calcularMontoFinal() {
+        return (producto.precio * cantidad) - ((producto.precio/100) * producto.porcDesc);
+    }
 }

@@ -67,8 +67,8 @@ public class Principal {
                 double monto_final = ven.calcularMontoFinal();
                 
                 System.out.println("Producto: " + prd.nombre + ", vendido");
-                System.out.println("Monto total a pagar: " + monto_final);
-                System.out.println("al producto le quedan " + prd.cantidadStock + ", en stock");
+                System.out.println("Monto total a pagar: S/ " + monto_final);
+                System.out.println("al producto le quedan " + prd.cantidadStock + ", unidades en stock");
             }
             else
                 System.out.println("## ⚠ NO SE ENCONTRO PRODUCTO CON CODIGO: " + codigo + " ##");
